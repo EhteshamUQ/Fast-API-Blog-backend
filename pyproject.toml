@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "cms"
+version = "0.1.0"
+description = ""
+authors = ["Ehtesham <ehteshamuddinqureshi.mohd@zemosolabs.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = {extras = ["standard"], version = "^0.27.0.post1"}
+fastapi = "^0.109.2"
+pydantic = {extras = ["email"], version = "^2.6.1"}
+sqlmodel = "^0.0.14"
+psycopg2-binary = "^2.9.9"
+bcrypt = "^4.1.2"
+alembic = "^1.13.1"
+python-jose = "^3.3.0"
+python-multipart = "^0.0.9"
+enum34 = "^1.1.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
