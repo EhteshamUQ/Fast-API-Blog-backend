@@ -2,7 +2,7 @@ from fastapi import HTTPException
 from sqlmodel import Session, select
 
 from db.models.Blog import Blog
-from models.blog import CreateBlogDTO, EditBlogDTO
+from schemas.blog import CreateBlogDTO, EditBlogDTO
 
 
 def get_all_blogs(session: Session):

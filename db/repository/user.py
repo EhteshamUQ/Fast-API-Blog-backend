@@ -3,7 +3,7 @@ from typing import Optional
 from fastapi import Depends, HTTPException
 from sqlmodel import Session, select
 
-from models.user import UserData, UserUpdateData
+from schemas.user import UserData, UserUpdateData
 from utils.security import decode_token, oauth2_scheme
 
 from ..models.User import User

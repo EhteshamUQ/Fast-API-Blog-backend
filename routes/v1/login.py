@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
-from models.login import Token
+from schemas.login import Token
 from sqlmodel import Session
 from db.session import get_db_session
 from db.repository.user import get_user_with_email

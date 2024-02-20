@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
-from models.user import UserData, UserResponse, UserUpdateData
+from schemas.user import UserData, UserResponse, UserUpdateData
 from sqlmodel import Session
 from db.session import get_db_session as get_db
 from db.repository.user import (

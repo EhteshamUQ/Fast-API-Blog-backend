@@ -14,7 +14,7 @@ from db.repository.blog import (
 )
 from db.repository.user import get_current_user
 from db.session import get_db_session
-from models.blog import BlogDTO, CreateBlogDTO, EditBlogDTO
+from schemas.blog import BlogDTO, CreateBlogDTO, EditBlogDTO
 
 blog_router = APIRouter(prefix="/blogs", tags=["Blogs"])
 
@@ -42,7 +42,7 @@ def update_a_blog(
     session: Session = Depends(get_db_session),
     user: User = Depends(get_current_user),
 ):
-    blog: Blog = get_blog_by_id(blog_details.id)
+    blog: Blog = get_blog_by_id(blog_details.id, session)
     if user.id != blog.author_id and user.role != RoleEnum.ADMIN:
         raise HTTPException(
             status_code=409,
